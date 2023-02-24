@@ -1,0 +1,28 @@
+<section class="vh-100" style="background-color: lightgray;">
+ <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <h3 class="mb-5">Resend confirmation instructions</h3>
+            <div class="form-outline mb-4">
+              <div class="field">
+                <%= f.label :email, class: "form-label" %><br />
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-lg", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+              </div>
+            </div>
+             <div class="actions">
+              <%= f.submit "Resend confirmation instructions", class: "btn btn-secondary btn-lg btn-block" %>
+              <%= render "devise/shared/links" %>  
+             </div>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</section>
+
