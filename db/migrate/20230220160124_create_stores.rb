@@ -6,7 +6,7 @@ class CreateStores < ActiveRecord::Migration[6.1]
       t.string :color
       t.text :description
       t.float :price
-
+      
       t.timestamps
     end
   end
