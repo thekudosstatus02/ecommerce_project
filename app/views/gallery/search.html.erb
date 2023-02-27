@@ -26,9 +26,7 @@
           <div class="col-sm-3" >
             <div class="card" style="text-align: center; ">
               <div class="card-body">
-              <%# <% store.files.each do |file| %> 
                 <%= image_tag store.files[0], :width=>"200px", :height=>"200px" %>
-            <%# <% end %> 
                 <h5 class="card-title"><%= store.name%></h5>
                 <p class="card-text"> <%= store.description %></p>
                 <p class="card-text">Price :<%= store.price %></p>
