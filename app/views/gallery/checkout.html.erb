@@ -61,16 +61,14 @@
                         <%= f.text_field :verification_number, :class=>"form-control mb-3" %>
                     </div>
                 </div>
-                
                 <div class="col-12">
-                   
-                    <div class="actions">
+                  <div class="actions">
                         <%= f.submit "#{number_to_currency(session[:amount])}", class:"btn btn-primary"%>
-                    </div>
+                  </div>
                 </div>
             </div>
         </div>
-        <% end %>
+      <% end %>
     </div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" >
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
