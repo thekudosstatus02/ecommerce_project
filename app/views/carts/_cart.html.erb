@@ -9,7 +9,6 @@
 		<% unless cart.line_items.empty? %>
 		Your Cart
 	</h1>
-	<!-- Bootstrap table and table-bordered classes -->
 	<table class="table table-bordered">
 		<thead>
 			<tr>
@@ -37,7 +36,6 @@
 	<% else %>
 		<%= link_to "login", new_user_session_path, class:"link-secondary" %>
 	<% end %>
-
 	<% end %>
 </div>
 
