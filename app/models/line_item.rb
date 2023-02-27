@@ -5,5 +5,4 @@ class LineItem < ActiveRecord::Base
 	def total_price
 		store.price * quantity
 	end
-
 end
